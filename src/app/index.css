@@ -1,0 +1,140 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+}
+
+p.minor, span.minor {
+    font-size: 1.4rem;
+    font-size: 14px;
+    color: #acacac;
+}
+
+p.minor-info {
+    font-size: 1.6rem;
+    font-size: 16px;
+    color: #a4a4a4;
+}
+
+.thumbnail img.pull-right {
+  width: 50px;
+}
+
+#repository-search-box {
+    padding : 9px;
+    width: 100%;
+    font-size: 20px;
+    background-color: white;
+}
+
+.loading {
+    background: url('../assets/images/ajax-loader.gif');
+    background-repeat: no-repeat no-repeat;
+    background-position: 99%;
+}
+
+
+/*-auto complete----*/
+
+div.auto-complete {
+    width: 100%;
+}
+div.auto-complete .item {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    background-color: white;
+    text-align: left;
+}
+
+div.auto-complete .item a {
+    font-size: 2.5rem;
+    font-size: 25px;
+}
+
+div.auto-complete .item p.description, .item p.count-info {
+    margin-top: 10px;
+    color: #666666;
+    font-size: 1.3rem;
+    font-size: 13px;
+}
+
+.item p.count-info {
+    padding : 0px 3px 0px;
+}
+.item p.count-info.issues {
+    color: indianred;
+}
+/*-auto complete----*/
+
+
+
+/*--- repository view --*/
+div.repository {
+    background-color: white;
+    padding : 10px;
+}
+
+
+
+div.owner-info .image-wrapper {
+    float: left;
+    width: 20%;
+}
+
+div.owner-info .info-wrapper {
+    float: right;
+    width: 78%;
+    text-align: left;
+}
+
+div.owner-info p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+.owner-info img {
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+}
+/*--- repository view --*/
+
+
+/* issue */
+.issues .item {
+    text-align: left;
+    background-color: white;
+    margin-bottom: 3px;
+    padding : 5px;
+    border : 1px solid #DDDDDD;
+    min-height: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.issues .item img {
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+.issues .issue_body {
+    margin-top: 5px;
+    padding : 3px;
+    border-top: 1px solid #DDDDDD;
+}
+
+ul.pagination {
+    padding : 0px;
+    margin:3px;
+    list-style-type: none;
+}

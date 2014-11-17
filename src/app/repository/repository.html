@@ -1,0 +1,87 @@
+
+<div class="container">
+    <div ng-include="'components/navbar/navbar.html'"></div>
+
+    <div class="jumbotron text-center">
+        <div class="repository row">
+            <p>
+                <a class="repository-title" href="">{{repository.name}}<span>({{repository.full_name}})</span></a>
+            </p>
+            <p class="minor-info">
+                {{repository.description}}
+            </p>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Author info</div>
+                    <div class="panel-body owner-info">
+                        <div class="image-wrapper">
+                            <img src="{{owner.avatar_url}}" class="img img-responsive" alt=""/>
+                        </div>
+                        <div class="owner-info info-wrapper">
+                            <p class="important">{{owner.login}} <span class="minor">({{owner.type}})</span></p>
+                            <p class="minor">{{owner.bio}}</p>
+                            <p class="minor"> <i class="fa fa-map-marker"></i> {{owner.location}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Issues [{{issues.total_count}}]</div>
+                    <div class="panel-body owner-info">
+
+                        <div class="issues">
+
+                            <div class="item" ng-repeat="issue in issues.items|paginate:current_pag_item.index:5">
+                                <p class="minor-info"><a href="/#/repository/{{repository.full_name}}">{{issue.title}}</a></p>
+                                <p class="minor"><img  src="{{issue.user.avatar_url}}" alt=""/> {{issue.user.login}}</p>
+                                <!--<p class="count-info pull-right"> <i class="fa fa-star"></i> {{repository.stargazers_count}}</p>-->
+                                <!--<p class="count-info pull-right"> <i class="fa fa-code-fork"></i> {{repository.forks_count}}</p>-->
+
+                                <!--<p class="count-info issues pull-right">issues : {{repository.open_issues_count}}</p>-->
+                                <!--<p class="description">{{repository.description}}</p>-->
+                                <p class="issue_body minor hidden" id="{{issue.id}}">{{issue.body}}</p>
+                                <p class="minor"><a href="" ng-click="toggleShow(issue)">show</a></p>
+                            </div>
+                            <ul class="pagination">
+                                <li ng-class="{'active' : pag_item.active == true}" ng-repeat="pag_item in pagination_items" ng-show="pagination_items.length > 1">
+                                    <a ng-click="set_pag_item(pag_item)" href="">{{pag_item.index}}</a>
+                                </li>
+                                <!--<li class="active">-->
+                                    <!--<a href="">1</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="">2</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="">3</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="">4</a>-->
+                                <!--</li>-->
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+
+    </div>
+
+    <hr>
+
+    <div class="footer">
+
+    </div>
+
+</div>

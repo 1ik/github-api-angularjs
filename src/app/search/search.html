@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div ng-include="'components/navbar/navbar.html'"></div>
+
+    <div class="jumbotron text-center">
+        <input id="repository-search-box" type="text" ng-model="repository_name" placeholder="Repository Name" ng-class="{'loading' : loading==true}"/>
+        <div class="auto-complete">
+            <div class="item" ng-repeat="repository in repositories">
+                <a href="/#/repository/{{repository.full_name}}">{{repository.full_name}}</a>
+                <p class="count-info pull-right"> <i class="fa fa-star"></i> {{repository.stargazers_count}}</p>
+                <p class="count-info pull-right"> <i class="fa fa-code-fork"></i> {{repository.forks_count}}</p>
+
+                <p class="count-info issues pull-right">issues : {{repository.open_issues_count}}</p>
+                <p class="description">{{repository.description}}</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+
+    </div>
+
+    <hr>
+
+    <div class="footer">
+
+    </div>
+
+</div>
